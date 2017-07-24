@@ -1,12 +1,12 @@
 {
   "name": "image-masher",
+  "author": "Zack Creach",
   "version": "1.0.0",
-  "description": "",
+  "description": "Image masher – Image compression tool using imagemin & gulp",
   "main": "index.js",
   "scripts": {
     "start": "gulp compress"
   },
-  "author": "Zack Creach",
   "license": "ISC",
   "devDependencies": {
     "gulp": "3.9.1",
