@@ -3,10 +3,10 @@ const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
 const pngquant = require('imagemin-pngquant');
 const path = require('path');
+const del = require('del');
 
-// Do not add / to end of source as we're globbing from there
-const imgSource = '/Users/zack/Desktop/import';
-const imgDest = '/Users/zack/Desktop/export';
+const imgSource = './input';
+const imgDest = './output';
 
 gulp.task('compress', () => {
   gulp.src(imgSource + '/**/*')
@@ -39,4 +39,9 @@ gulp.task('compress', () => {
       verbose: true
     }))
     .pipe(gulp.dest(imgDest));
+});
+
+// Run with 'npm clean'. Careful: this cleans the input AND output.
+gulp.task('clean', () => {
+  gulp.src(del(['./input/**/*', './output/**/*']));
 });

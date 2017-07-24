@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp compress"
+    "clean": "gulp clean"
   },
   "license": "ISC",
   "devDependencies": {
