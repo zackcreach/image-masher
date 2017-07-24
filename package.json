@@ -5,8 +5,7 @@
   "description": "Image masher – Image compression tool using imagemin & gulp",
   "main": "index.js",
   "scripts": {
-    "start": "gulp compress",
-    "clean": "gulp clean"
+    "start": "gulp compress"
   },
   "license": "ISC",
   "devDependencies": {

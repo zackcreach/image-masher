@@ -13,7 +13,7 @@ gulp.task('compress', () => {
     .pipe(imagemin([
       mozjpeg({
         // quality is compression quality. Min and max are numbers in range 0 (worst) to 100 (perfect).
-        quality: 85,
+        quality: 60,
         // progressive of false creates baseline JPEG file.
         progressive: true,
       }),
@@ -41,7 +41,10 @@ gulp.task('compress', () => {
     .pipe(gulp.dest(imgDest));
 });
 
-// Run with 'npm clean'. Careful: this cleans the input AND output.
-gulp.task('clean', () => {
-  gulp.src(del(['./input/**/*', './output/**/*']));
+gulp.task('cleanInput', () => {
+  gulp.src(del('./input/**/*'));
+});
+
+gulp.task('cleanOutput', () => {
+  gulp.src(del('./output/**/*'));
 });
