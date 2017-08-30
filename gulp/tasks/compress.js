@@ -2,8 +2,8 @@ const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const mozjpeg = require('imagemin-mozjpeg');
 const pngquant = require('imagemin-pngquant');
-const path = require('path');
 const del = require('del');
+const open = require('open');
 
 const imgSource = './input';
 const imgDest = './output';
@@ -38,13 +38,14 @@ gulp.task('compress', () => {
     ],{
       verbose: true
     }))
-    .pipe(gulp.dest(imgDest));
+    .pipe(gulp.dest(imgDest))
+    .pipe(open(imgDest))
 });
 
-gulp.task('cleanInput', () => {
-  gulp.src(del('./input/**/*'));
+gulp.task('clean-input', () => {
+  del(`${imgSource}/**/*`);
 });
 
-gulp.task('cleanOutput', () => {
-  gulp.src(del('./output/**/*'));
+gulp.task('clean-output', () => {
+  del(`${imgDest}/**/*`);
 });
