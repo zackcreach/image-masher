@@ -5,10 +5,12 @@
   "description": "Image masher – Image compression tool using imagemin & gulp",
   "main": "index.js",
   "scripts": {
+    "drag": "mkdir input && open input",
     "start": "gulp compress"
   },
   "license": "ISC",
   "devDependencies": {
+    "del": "3.0.0",
     "gulp": "3.9.1",
     "gulp-imagemin": "3.3.0",
     "imagemin-mozjpeg": "6.0.0",

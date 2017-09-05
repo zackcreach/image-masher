@@ -9,7 +9,7 @@ const imgSource = './input';
 const imgDest = './output';
 
 gulp.task('compress', () => {
-  gulp.src(imgSource + '/**/*')
+  gulp.src(`${imgSource}/**/*`)
     .pipe(imagemin([
       mozjpeg({
         // quality is compression quality. Min and max are numbers in range 0 (worst) to 100 (perfect).
