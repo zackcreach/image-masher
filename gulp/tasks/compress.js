@@ -13,7 +13,7 @@ gulp.task('compress', () => {
     .pipe(imagemin([
       mozjpeg({
         // quality is compression quality. Min and max are numbers in range 0 (worst) to 100 (perfect).
-        quality: 60,
+        quality: 75,
         // progressive of false creates baseline JPEG file.
         progressive: true,
       }),
