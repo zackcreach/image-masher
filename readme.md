@@ -11,8 +11,10 @@ Image compression tool using imagemin & gulp. Skip Photoshop altogether!
 4. Throw your images (jpeg, png, svg, gif) into the input folder
 5. `npm start` to mash!
 
+
 Enjoy your new, tiny, ready-to-upload image files!
 
 Once uploaded/relocated, run `gulp clean-output` and/or `gulp clean-input` to remove working files respectively.
 
-* Image quality/compression settings (heavily commented for clarity) can be found in gulp/tasks/compress.js
+
+_Image quality/compression settings (heavily commented for clarity) can be found in gulp/tasks/compress.js_
