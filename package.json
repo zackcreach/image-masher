@@ -5,7 +5,9 @@
   "description": "Image masher – Image compression tool using imagemin & gulp",
   "main": "index.js",
   "scripts": {
-    "drag": "echo 'Creating input and output directories..' && mkdir output && mkdir input && open input",
+    "drag": "echo 'Confirming input and output directories..' && npm run input && npm run output && open input",
+    "input": "if [ ! -d 'input' ]; then mkdir input; fi",
+    "output": "if [ ! -d 'output' ]; then mkdir output; fi",
     "start": "gulp compress"
   },
   "license": "ISC",

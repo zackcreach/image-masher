@@ -13,7 +13,7 @@ gulp.task('compress', () => {
     .pipe(imagemin([
       mozjpeg({
         // quality is compression quality. Min and max are numbers in range 0 (worst) to 100 (perfect).
-        quality: 75,
+        quality: 40,
         // progressive of false creates baseline JPEG file.
         progressive: true,
       }),
@@ -27,7 +27,7 @@ gulp.task('compress', () => {
         // interlaced gif for progressive rendering
         interlaced: false,
         // optimization level determines how much optimization is done; higher levels take longer, but may have better results.
-        optimizationLevel: 3,
+        optimizationLevel: 4,
         // Reduce the number of distinct colors in each output GIF to num or less. Num must be between 2 and 256.
         colors: 175,
       }),
